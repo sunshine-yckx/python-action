@@ -163,7 +163,7 @@ function batchReplace() {
 
 async function downloader_jd() {
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
-        await download("https://github.com/Choicc/MyActions/raw/main/srcipts/jdCookie.js", "./jdCookie.js", "京东Cookies");
+        await download("https://github.com/Choicc/MyActions/raw/main/scripts/jdCookie.js", "./jdCookie.js", "京东Cookies");
     if (remoteContent.indexOf("jdFruitShareCodes") > 0) {
         await download(
             "https://gitee.com/lxk0301/jd_scripts/raw/master/jdFruitShareCodes.js",
