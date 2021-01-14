@@ -11,7 +11,7 @@ exports.main_handler = async (event, context, callback) => {
       //require('./'+v+'.js')
 
       //2.执行国内gitee远端js文件如果部署，在国内节点，选择1或2的方式
-      //request('https://gitee.com/lxk0301/jd_scripts/raw/master/'+v+'.js', function (error, response, body) {
+      //request('https://github.com/Choicc/MyActions/raw/main/scripts/'+v+'.js', function (error, response, body) {
       // eval(response.body)
       //})
 
