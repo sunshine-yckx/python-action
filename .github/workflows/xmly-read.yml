@@ -1,0 +1,52 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 中青read
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '0 */2 * * *'
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/whyour/hundun.git ~/hundun
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: npm install
+        run: |
+          cd ~/hundun
+          python -m pip install --upgrade pip
+          pip install requests
+          pip install rsa
+          pip install python-dateutil
+      - name: '运行 【中青read】'
+        run: |
+          cd ~/hundun
+          python3 quanx/youth_read.py
+        env:
+            YOUTH1_READ_BODY1: ${{ secrets.YOUTH1_READ_BODY1 }}  #必须 账号1 body1
+            YOUTH1_READ_BODY2: ${{ secrets.YOUTH1_READ_BODY2 }}  #必须 账号1 body1
+            YOUTH1_READ_BODY3: ${{ secrets.YOUTH1_READ_BODY3 }}  #必须 账号1 body1
+            YOUTH1_READ_BODY4: ${{ secrets.YOUTH1_READ_BODY4 }}  #必须 账号1 body1
+            YOUTH1_READ_BODY5: ${{ secrets.YOUTH1_READ_BODY5 }}  #必须 账号1 body1
+            YOUTH2_READ_BODY1: ${{ secrets.YOUTH2_READ_BODY1 }}  #非必须 账号2 body1
+            YOUTH2_READ_BODY2: ${{ secrets.YOUTH2_READ_BODY2 }}  #非必须 账号2 body1
+            YOUTH2_READ_BODY3: ${{ secrets.YOUTH2_READ_BODY3 }}  #非必须 账号2 body1
+            YOUTH2_READ_BODY4: ${{ secrets.YOUTH2_READ_BODY4 }}  #非必须 账号2 body1
+            YOUTH2_READ_BODY5: ${{ secrets.YOUTH2_READ_BODY5 }}  #非必须 账号2 body1
+            PUSH_KEY: ${{ secrets.PUSH_KEY }}
+            BARK_PUSH: ${{ secrets.BARK_PUSH }}
+            TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+            TG_USER_ID: ${{ secrets.TG_USER_ID }}
+            BARK_SOUND: ${{ secrets.BARK_SOUND }}
+            DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+            DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
