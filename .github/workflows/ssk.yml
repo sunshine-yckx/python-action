@@ -24,6 +24,7 @@ jobs:
       - name: npm install
         run: |
           cd ~/hundun
+          python -m pip install --upgrade pip
           pip install requests
           pip install rsa
       - name: '运行 【中青1】'
