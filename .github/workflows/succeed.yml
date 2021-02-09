@@ -24,11 +24,11 @@ jobs:
       - name: npm install
         run: |
           cd ~/hundun
-          npm install
+          pip install -r ./requirements.txt
       - name: '运行 【中青】'
         run: |
           cd ~/hundun
-          node quanx/youth.py
+          python quanx/youth.py
         env:
           
           
