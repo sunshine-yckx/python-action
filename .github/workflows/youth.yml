@@ -7,7 +7,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: xmly_speed
+        types: youth_speed
 
 jobs:
     build:
@@ -26,7 +26,7 @@ jobs:
               run: pip install -r ./requirements.txt
 
             - name: "运行 中青极速版"
-              run: python3 xmly_speed.py
+              run: python3 youth.py
               env:
                   YOUTH_HEADER1: ${{ secrets.YOUTH_HEADER1 }}  #必须 账号1 body1
                   YOUTH_READBODY1: ${{ secrets.YOUTH_READBODY1 }}  #必须 账号1 body1
