@@ -1,4 +1,4 @@
-name: 中青极速版
+name: 中青的极速版
 
 on:
     workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
             - name: "安装依赖包"
               run: pip install -r ./requirements.txt
 
-            - name: "运行 中青极速版"
+            - name: "运行 中青的极速版"
               run: python3 youth.py
         env:
             YOUTH_HEADER1: ${{ secrets.YOUTH_HEADER1 }}  #必须 账号1 body1
