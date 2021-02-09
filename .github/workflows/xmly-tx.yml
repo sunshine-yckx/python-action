@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 喜马拉雅1
+name: 喜马拉雅可提现
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/sunshine-yckx/xmly.git ~/xmly
+          git clone https://github.com/whyour/hundun.git ~/hundun
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -30,8 +30,8 @@ jobs:
           pip install python-dateutil
       - name: '运行 【喜马拉雅1】'
         run: |
-          cd ~/xmly
-          python3 xmly_speed.py
+          cd ~/hundun
+          python3 quanx/xmly_speed.py
         env:
           
               XMLY_SPEED_COOKIE: ${{ github.event.client_payload.XMLY_SPEED_COOKIE || secrets.XMLY_SPEED_COOKIE }}
