@@ -31,7 +31,7 @@ jobs:
       - name: '运行 【喜马拉雅1】'
         run: |
           cd ~/hundun
-          python3 quanx/youth.py
+          python3 quanx/xmly_speed.py
         env:
           
           
