@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/whyour/hundun.git ~/hundun
+          git clone https://github.com/sunshine-yckx/xmly.git ~/xmly
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -30,8 +30,8 @@ jobs:
           pip install python-dateutil
       - name: '运行 【喜马拉雅1】'
         run: |
-          cd ~/hundun
-          python3 quanx/xmly_speed.py
+          cd ~/xmly
+          python3 xmly_speed.py
         env:
           
           
