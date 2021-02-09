@@ -28,7 +28,7 @@ jobs:
           pip install requests
           pip install rsa
           pip install python-dateutil
-      - name: '运行 【喜马拉雅1】'
+      - name: '运行 【喜马拉雅可提现】'
         run: |
           cd ~/hundun
           python3 quanx/xmly_speed.py
