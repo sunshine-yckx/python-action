@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 笑谱
+name: 中青试试看
 
 on:
   workflow_dispatch:
@@ -26,16 +26,25 @@ jobs:
         run: |
           cd ~/hundun
           npm install
-      - name: '运行 【笑谱】'
+      - name: '运行 【中青试试看】'
         run: |
           cd ~/hundun
           python3 quanx/youth.py
         env:
-          
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          YOUTH_HEADER1: ${{ secrets.YOUTH_HEADER1 }}  #必须 账号1 body1
+            YOUTH_READBODY1: ${{ secrets.YOUTH_READBODY1 }}  #必须 账号1 body1
+            YOUTH_REDBODY1: ${{ secrets.YOUTH_REDBODY1 }}  #必须 账号1 body1
+            YOUTH_READTIMEBODY1: ${{ secrets.YOUTH_READTIMEBODY1 }}  #必须 账号1 body1
+            YOUTH_WITHDRAWBODY1: ${{ secrets.YOUTH_READTIMEBODY1 }}  #非必须 账号1提现 body1
+            YOUTH_HEADER2: ${{ secrets.YOUTH_HEADER2 }}  #非必须 账号2 body2
+            YOUTH_READBODY2: ${{ secrets.YOUTH_READBODY2 }}  #非必须 账号2 body2
+            YOUTH_REDBODY2: ${{ secrets.YOUTH_REDBODY2 }}  #非必须 账号2 body2
+            YOUTH_READTIMEBODY2: ${{ secrets.YOUTH_READTIMEBODY2 }}  #非必须 账号2 body2
+            YOUTH_WITHDRAWBODY2: ${{ secrets.YOUTH_READTIMEBODY2 }}  #非必须 账号2提现 body2
+            BARK: ${{ secrets.BARK }}  #非必须 bark通知
+            SCKEY: ${{ secrets.SCKEY }}  #非必须 server酱通知
+            TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}  #非必须 tg机器人token
+            TG_USER_ID: ${{ secrets.TG_USER_ID }}  #非必须 tg机器人userId
+            DD_BOT_ACCESS_TOKEN: ${{ secrets.DD_BOT_ACCESS_TOKEN }}  #非必须 钉钉机器人token
+            DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}  #非必须 钉钉机器人secret
+            
