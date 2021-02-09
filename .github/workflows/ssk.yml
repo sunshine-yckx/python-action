@@ -17,12 +17,11 @@ jobs:
       - name: Checkout
         run: |
           git clone https://github.com/ziye12/JavaScript.git ~/JavaScript
-          
-      - name: "Set up Python"
-              uses: actions/setup-python@v1
-              with:
-                  python-version: 3.7
-                  
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+            
       - name: npm install
         run: |
           cd ~/hundun
