@@ -23,8 +23,8 @@ jobs:
           python-version: '3.x'
       - name: npm install
         run: |
-          pip install -r ./requirements.txt
           cd ~/hundun
+          pip pip install requests    
       - name: '运行 【中青】'
         run: |
           cd ~/hundun
