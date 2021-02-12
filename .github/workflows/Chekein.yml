@@ -19,18 +19,18 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/sunshine-yckx/python-action.git ~/Scripts  
+          git clone https://github.com/sunshine-yckx/python-action.git ~/python-action  
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
-          cd ~/Scripts
+          cd ~/python-action
           npm install -g npm
           npm update
                  
       - name: '运行 【机场签到】'
         run: |
-          cd ~/Scripts
+          cd ~/python-action
           node Task/qiandaochekin.js
