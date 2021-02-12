@@ -30,7 +30,7 @@ jobs:
           npm install -g npm
           npm update
                  
-      - name: '运行 【dkd】'
+      - name: '运行 【机场签到】'
         run: |
           cd ~/Scripts
           node Task/qiandaochekin.js
