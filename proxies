@@ -9,80 +9,80 @@ proxies:
     server: ap1-sg.er3.xyz
     port: 29986
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇭🇰香港铜锣湾   
     server: a1.er3.xyz
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇸🇬新加坡 
     server: tx.wy.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true  
   - name: 🇯🇵东京银座   
     server: a1.ap.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇸🇬新加坡圣淘沙   
     server: a2.ap.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇸🇬新加坡滨海湾   
     server: a3.ap.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇸🇬新加坡金沙湾   
     server: a4.ap.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇸🇬新加坡金沙湾2   
     server: a5.ap.fastqvpn.com
     port: 29980
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
   - name: 🇯🇵日本大阪   
     server: ap1-jp.er3.xyz
     port: 29985
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
   - name: 🇺🇸美国曼哈顿
     server: ap1-us.er3.xyz
     port: 29988
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
   - name: 🇬🇧英国牛津
     server: ap1-uk.er3.xyz
     port: 29987
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
     
@@ -90,16 +90,16 @@ proxies:
     server: ap1-ge.er3.xyz
     port: 29984
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
   - name: 🇨🇦加拿大多伦多   
     server: ap1-ca.er3.xyz
     port: 29983
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
     
@@ -107,8 +107,8 @@ proxies:
     server: ap1-au.er3.xyz
     port: 29982
     type: http
-    username: "123456789"
-    password: 123456789
+    username: "435430079485444096"
+    password: 09b782a4-a9c8-4bb4-88ba-e89856183e91
     tls: true
     skip-cert-verify: true
 proxy-groups:
@@ -149,7 +149,8 @@ proxy-groups:
       - 🇩🇪德国柏林
       - 🇨🇦加拿大多伦多
       - 🇦🇺澳大利亚悉尼
-  - name: 🌍 国外媒体    type: select
+  - name: 🌍 国外媒体
+    type: select
     proxies:
       - ♻️ 自动选择
       - 🚀 节点选择
