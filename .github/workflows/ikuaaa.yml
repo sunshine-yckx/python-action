@@ -1,0 +1,30 @@
+name: ikuuu机场签到
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 */8 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: ikuuu
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【ikuuu机场签到】'
+        run: |
+          node ./Task/ikuuu.js
+        env:
+          IKUUU_COOKIE: ${{ secrets.IKUUU_COOKIE }}
