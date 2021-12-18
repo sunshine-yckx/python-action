@@ -23,7 +23,7 @@ let CONFIG = {
     'script/Lists',
     'rootCA',
     'Docker',              // 当文件夹或名称中包含 Docker 时，跳过下载更新
-    'Todo',                // 排除单个文件，使用文件名包含的关键字即可
+    'Todo', 'notify'               // 排除单个文件，使用文件名包含的关键字即可
     '^\\.',                // 也可以使用正则表示式。匹配方式为 new RegExp(str).test(fileurl)
   ],
   wbtoken: 'a8c259b2-67fe-4c64-8700-7bfdf1f55cb3',    // WEBHOOK TOKEN（在 SETTING 界面查看）用于发送保存当前任务列表的网络请求，可省略。
