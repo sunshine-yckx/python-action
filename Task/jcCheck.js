@@ -22,8 +22,8 @@ let hjh = {
 */
 
 let iku = {
-  email: "1563530344@qq.com",
-  pwd: "qwe@123456",
+  email: "",
+  pwd: "",
 };
 
 /*
